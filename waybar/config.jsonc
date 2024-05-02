@@ -10,99 +10,42 @@
     "gtk-layer-shell": true,
     // positions generated based on config.ctl //
     "modules-left": [
-        "custom/rofi",
+        "custom/wofi",
         "hyprland/workspaces"
     ],
     "modules-center": [
-        "custom/padd",
-        "custom/l_end",
-        "idle_inhibitor",
         "clock",
-        "custom/r_end",
-        "custom/padd"
+        "custom/weather",
     ],
     "modules-right": [
-        "custom/padd",
-        "custom/l_end",
-        "custom/wbar",
-        "custom/theme",
-        "custom/wallchange",
-        "custom/r_end",
-        "custom/l_end",
-        "custom/r_end",
-        "",
-        "custom/l_end",
-        "battery",
-        "custom/r_end",
-        "custom/l_end",
+        "tray",
+        "pulseaudio",
         "backlight",
         "network",
-        "pulseaudio",
-        "custom/keybindhint",
-        "custom/r_end",
-        "custom/padd"
+        // "custom/keybindhint",
+        "battery",
     ],
     // sourced from modules based on config.ctl //
-    "custom/power": {
-        "format": "{}",
-        "rotate": 0,
-        "exec": "echo ; echo  logout",
-        "on-click": "~/.config/hyprdots/scripts/logoutlaunch.sh 2",
-        "on-click-right": "~/.config/hyprdots/scripts/logoutlaunch.sh 1",
-        "interval": 86400, // once every day
-        "tooltip": true
-    },
-    "custom/rofi": {
+    "custom/wofi": {
         "format": "󰣇",
-        "tooltip": false,
-        //"on-click-right": "nwg-drawer",
-        "on-click": "sleep 0.1 && bash /home/subzcuber/.config/wofi/launchers/type-7/launcher.sh",
+        "tooltip": true,
+        "on-click-right": "lxappearance",
+        "on-click": "pkill -9 wofi || wofi --show drun",
         "on-click-middle": "pkill -9 wofi"
     },
-    "custom/wbar": {
-        "format": "{}", //    //
-        "rotate": 0,
-        "exec": "echo ; echo  switch bar //  dock",
-        "on-click": "~/.config/hyprdots/scripts/wbarconfgen.sh n",
-        "on-click-right": "~/.config/hyprdots/scripts/wbarconfgen.sh p",
-        "on-click-middle": "sleep 0.1 && ~/.config/hyprdots/scripts/quickapps.sh kitty firefox spotify code dolphin",
-        "interval": 86400,
-        "tooltip": true
-    },
-    "custom/theme": {
-        "format": "{}",
-        "rotate": 0,
-        "exec": "echo ; echo 󰟡 switch theme",
-        "on-click": "~/.config/hyprdots/scripts/themeswitch.sh -n",
-        "on-click-right": "~/.config/hyprdots/scripts/themeswitch.sh -p",
-        "on-click-middle": "sleep 0.1 && ~/.config/hyprdots/scripts/themeselect.sh",
-        "interval": 86400, // once every day
-        "tooltip": true
-    },
-    "custom/wallchange": {
-        "format": "{}",
-        "rotate": 0,
-        "exec": "echo ; echo 󰆊 switch wallpaper",
-        "on-click": "~/.config/hyprdots/scripts/swwwallpaper.sh -n",
-        "on-click-right": "~/.config/hyprdots/scripts/swwwallpaper.sh -p",
-        "on-click-middle": "sleep 0.1 && ~/.config/hyprdots/scripts/swwwallselect.sh",
-        "interval": 86400, // once every day
-        "tooltip": true
-    },
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "rotate": 0,
-        "format-icons": {
-            "activated": "󰥔",
-            "deactivated": ""
-        }
+    "custom/weather": {
+        "format": "{}",
+        "tooltip": true,
+        "interval": 3600,
+        "exec": "wttrbar --custom-indicator '{ICON}\n<b>{temp_C}</b>' --location hyderabad",
+        "return-type": "json"
     },
     "clock": {
         "interval": 1,
         "locale": "C",
         "format": "{:%I:%M.%S %p}",
         "rotate": 0,
-        "format-alt": "{:%R 󰃭 %d·%m·%y}",
+        "format-alt": "{:%I:%M.%S %p  󰃭  %d·%m·%y}",
         "tooltip-format": "<tt>{calendar}</tt>",
         "calendar": {
             "mode": "month",
@@ -126,8 +69,8 @@
     "battery": {
         "states": {
             "good": 95,
-            "warning": 30,
-            "critical": 20
+            "warning": 70,
+            "critical": 50
         },
         "format": "{icon} {capacity}%",
         "rotate": 0,
@@ -161,15 +104,15 @@
             "7": "七",
             "8": "八",
             "9": "九",
-            "10": "十",
+            "10": "十"
         },
         "on-scroll-up": "hyprctl dispatch workspace e+1 1>/dev/null",
         "on-scroll-down": "hyprctl dispatch workspace e-1 1>/dev/null",
         "sort-by-number": true,
         "active-only": false,
-	"persistent-workspaces": {
-		"*":4
-	}
+        "persistent-workspaces": {
+            "*": 4
+        }
     },
     "backlight": {
         "device": "intel_backlight",
@@ -205,9 +148,8 @@
     "pulseaudio": {
         "format": "{icon} {volume}",
         "rotate": 0,
-        "format-muted": "婢",
+        "format-muted": "",
         "on-click": "pavucontrol -t 3",
-        "on-click-middle": "~/.config/hyprdots/scripts/volumecontrol.sh -o m",
         "on-scroll-up": "pactl set-sink-volume 0 +1%",
         "on-scroll-down": "pactl set-sink-volume 0 -1%",
         "tooltip-format": "{icon} {desc} // {volume}%",
@@ -226,45 +168,12 @@
             ]
         }
     },
+    "tray": {
+        "show-passive-items": true,
+    },
     "custom/keybindhint": {
         "format": " ",
         "rotate": 0,
-        "on-click": "~/.config/hyprdots/scripts/keybinds_hint.sh"
-    },
-    // modules for padding //
-    "custom/l_end": {
-        "format": " ",
-        "interval": "once",
-        "tooltip": false
-    },
-    "custom/r_end": {
-        "format": " ",
-        "interval": "once",
-        "tooltip": false
-    },
-    "custom/sl_end": {
-        "format": " ",
-        "interval": "once",
-        "tooltip": false
-    },
-    "custom/sr_end": {
-        "format": " ",
-        "interval": "once",
-        "tooltip": false
-    },
-    "custom/rl_end": {
-        "format": " ",
-        "interval": "once",
-        "tooltip": false
-    },
-    "custom/rr_end": {
-        "format": " ",
-        "interval": "once",
-        "tooltip": false
-    },
-    "custom/padd": {
-        "format": "  ",
-        "interval": "once",
-        "tooltip": false
+        "on-click": "~/.config/hypr/keybinds_hint.sh"
     }
 }
