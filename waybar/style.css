@@ -3,8 +3,8 @@
 * {
 	border: none;
 	border-radius: 0;
-	font-family: "monospace boldx";
-	font-size: 9px;
+	font-family: "Iosevka boldx";
+	font-size: 10px;
 	min-height: 0;
 	margin: 0px;
 }
@@ -31,7 +31,7 @@ window#waybar {
 	margin: 0.5px;
   border-radius: 4px;
 	background: @color1;
-  color: @color6;
+  color: @background;
 	/* color: #ff8700; */
 	/*
 	color: #00afd7;
@@ -44,7 +44,7 @@ window#waybar {
 #workspaces button:hover {
 	box-shadow: inherit;
 	text-shadow: inherit;
-  background: @color6;
+  background: @background;
   color: @color1;
 }
 
@@ -53,7 +53,7 @@ window#waybar {
 	background: #00afd7;
 	color: #1b1d1e; */
   background: @background;
-  color: @color6;
+  color: @color1;
 }
 
 #workspaces button.urgent {
@@ -73,13 +73,13 @@ window#waybar {
 
 #pulseaudio, #backlight, #network {
   background: @color1;
-  color: @color6;
+  color: @background;
 }
 
 
 #custom-weather {
   background: @color1;
-  color: @color6;
+  color: @background;
 }
 
 #clock {
