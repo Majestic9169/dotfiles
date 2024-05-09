@@ -71,7 +71,7 @@ window#waybar {
   border-radius: 4px;
 }
 
-#pulseaudio, #backlight, #network {
+#pulseaudio, #backlight, #network, #custom-keybindhint {
   background: @color1;
   color: @background;
 }
