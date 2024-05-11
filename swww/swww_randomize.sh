@@ -18,7 +18,7 @@ export SWWW_TRANSITION_FPS=60
 
 # This controls (in seconds) when to switch to the next image
 # export SWWW_INTERVAL=600
-INTERVAL=3600
+INTERVAL=86400
 
 while true; do
 	find "$1" -type f \
