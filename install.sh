@@ -3,7 +3,7 @@
 LOG="${HOME}/Logs/dotfiles.log"
 GITHUB_USER=Majestic9169
 GITHUB_REPO=vegetable-dotfiles
-DIR="/home/${USER}/${GITHUB_REPO}"
+DIR="/home/${USER}/"
 
 mkdir -p "${HOME}/Logs"
 
@@ -35,10 +35,7 @@ download_packages() {
   if [[ -f "${DIR}/opt/packages" ]]; then
     _process "→ installing pacman packages"
 
-    # set variable for list of packages
-    packages="${DIR}/opt/packages"
-    
-    pacman -S --needed - < packages
+    pacman -S --needed - < "${DIR}/opt/packages"
   fi
 }
 
