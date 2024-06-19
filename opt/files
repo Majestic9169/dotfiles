@@ -1,0 +1,3 @@
+configs/.gitconfig .gitconfig
+configs/hypr/* hypr/
+configs/neofetch/* neofetch/
