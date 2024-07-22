@@ -1,0 +1,3 @@
+2024-07-22 21:24:46.910 [info] update#setState disabled
+2024-07-22 21:24:46.912 [info] update#ctor - updates are disabled as there is no update URL
+2024-07-22 21:24:49.976 [info] Extension host with pid 28435 exited with code: 0, signal: unknown.
