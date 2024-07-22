@@ -96,8 +96,6 @@ install() {
   #download_packages
   #link_dotfiles
   new_linked
-  ./astro-vim-install.sh
-  ./yay-setup.sh
 }
 
 install
