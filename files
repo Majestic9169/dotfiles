@@ -1,0 +1,4 @@
+configs/hypr/* .config/hypr
+configs/neofetch/* .config/neofetch
+configs/.gitconfig .gitconfig
+configs/waybar/* .config/waybar

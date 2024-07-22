@@ -1,0 +1,16 @@
+os-prober
+hyprland
+kitty
+github-cli
+htop
+waybar
+python-pywal
+hyprlock
+firefox
+lxappearance
+brightnessctl
+noto-fonts-cjk
+ttf-nerd-fonts-symbols-common
+ttf-nerd-fonts-symbols-common
+pipewire
+pavucontrol

@@ -3,7 +3,7 @@
 LOG="${HOME}/Logs/dotfiles.log"
 GITHUB_USER=Majestic9169
 GITHUB_REPO=vegetable-dotfiles
-DIR="/home/${USER}/"
+DIR="/home/${USER}/vegetable-dotfiles"
 
 mkdir -p "${HOME}/Logs"
 
@@ -41,11 +41,11 @@ download_packages() {
 
 link_dotfiles() {
   # symlink files to the HOME directory.
-  if [[ -f "${DIR}/opt/files" ]]; then
+  if [[ -f "${DIR}/files" ]]; then
     _process "→ Symlinking dotfiles in /configs"
 
     # Set variable for list of files
-    files="${DIR}/opt/files"
+    files="./files"
 
     # Store IFS separator within a temp variable
     OIFS=$IFS
@@ -81,8 +81,8 @@ link_dotfiles() {
 }
 
 install() {
-  download_dotfiles
-  download_packages
+  #download_dotfiles
+  #download_packages
   link_dotfiles
 }
 
