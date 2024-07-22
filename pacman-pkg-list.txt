@@ -10,6 +10,7 @@ firefox
 lxappearance
 brightnessctl
 noto-fonts-cjk
+noto-fonts
 ttf-nerd-fonts-symbols-common
 ttf-nerd-fonts-symbols-common
 pipewire

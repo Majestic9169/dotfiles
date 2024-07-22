@@ -46,6 +46,7 @@ link_dotfiles() {
 
     # Set variable for list of files
     files="./files"
+    cat ${files}
 
     # Store IFS separator within a temp variable
     OIFS=$IFS
@@ -65,7 +66,10 @@ link_dotfiles() {
         # create an array of line items
         file=(${links[$index]})
         # Create symbolic link
-        ln -fs "${DIR}/${file[0]}" "${HOME}/${file[1]}"
+	cat ${file}
+	echo ${DIR}/${file[0]}
+	echo ${HOME}/${file[2]}
+        ln -fs "${DIR}/${file[0]}" "~/.config/${file[2]}"
       done
       # set separater back to carriage return & new line break
       IFS=$'\r\n'
@@ -80,10 +84,18 @@ link_dotfiles() {
   fi
 }
 
+new_linked() {
+  mv "${HOME}/.config" "${HOME}/.config-backup"
+  rm -rf "${HOME}/.config/*"
+  ln -sf "${HOME}/vegetable-dotfiles/configs" "${HOME}/.config"
+}
+
 install() {
+  echo ${DIR}
   #download_dotfiles
   #download_packages
-  link_dotfiles
+  #link_dotfiles
+  new_linked
 }
 
 install

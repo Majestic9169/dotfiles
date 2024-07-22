@@ -1,4 +1,5 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
-    neofetch
+    wal --theme random_dark
+    fastfetch
 end
