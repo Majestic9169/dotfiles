@@ -15,12 +15,13 @@
     ],
     "modules-center": [
         "clock",
-        "custom/weather",
+        "custom/weather"
     ],
     "modules-right": [
         "tray",
         "pulseaudio",
         "backlight",
+        "custom/wallpaper",
         "custom/keybindhint",
         "network",
         "battery",
@@ -176,5 +177,10 @@
         "format": " ",
         "rotate": 0,
         "on-click": "~/.config/hypr/keybinds_hint.sh"
+    },
+    "custom/wallpaper": {
+        "format": "󰸉",
+        "rotate": 0,
+        "on-click": "waypaper"
     }
 }

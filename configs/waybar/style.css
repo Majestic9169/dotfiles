@@ -65,13 +65,13 @@ window#waybar {
 	background: #af005f;
 	color: #1b1d1e;
 }
-#clock, #battery, #cpu, #memory, #network, #pulseaudio, #custom-weather, #tray, #mode, #backlight, #custom-keybindhint, #custom-wofi {
+#clock, #battery, #cpu, #memory, #network, #pulseaudio, #custom-weather, #tray, #mode, #backlight, #custom-keybindhint, #custom-wofi, #custom-wallpaper {
 	padding: 0 3px;
 	margin: 4 2px;
   border-radius: 4px;
 }
 
-#pulseaudio, #backlight, #network, #custom-keybindhint {
+#pulseaudio, #backlight, #network, #custom-keybindhint, #custom-wallpaper {
   background: @color1;
   color: @background;
 }
