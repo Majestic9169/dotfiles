@@ -1,2 +1,3 @@
 vscodium-bin
+waypaper
 swww
