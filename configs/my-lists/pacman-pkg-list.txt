@@ -21,3 +21,4 @@ pipewire-jack
 wireplumber
 helvum
 pavucontrol
+nnn
