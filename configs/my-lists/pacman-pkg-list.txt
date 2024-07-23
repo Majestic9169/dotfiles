@@ -32,3 +32,4 @@ jq
 wf-recorder
 vlc
 mpv
+pacman-contrib

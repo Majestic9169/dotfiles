@@ -4,3 +4,4 @@ swww
 hyprpicker
 ttf-iosevka
 ttf-iosevka-term
+rate-mirrors
