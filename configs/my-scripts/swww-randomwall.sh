@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Set the path to the wallpapers directory
-wallpapersDir="$HOME/Wallpapers/"
+wallpapersDir="$HOME/Wallpapers/dark/"
 
 # Get a list of all image files in the wallpapers directory
 wallpapers=("$wallpapersDir"/*)
