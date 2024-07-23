@@ -25,3 +25,10 @@ fzf
 ranger
 python-pillow
 rofi-wayland
+grim
+slurp
+wl-clipboard
+jq
+wf-recorder
+vlc
+mpv

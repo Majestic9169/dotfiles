@@ -24,6 +24,7 @@
 ⏻ Poweroff    + ALT + END
 󰜉 Reboot    + ALT + HOME
 󰩈 Exit Hyprland    + M
+ Lock    + L
 
 # 󰸉 Wallpapers
 
@@ -39,6 +40,21 @@
 󰙢 Next   f10
 󰙤 Previous   f9
 
+# 󰃠 Brightness
+
+󰃚 Increase brightness  F10
+󰃜 Lower brightness  F9
+
 # 󰹑 Screen Recording and Screenshots
+
+ Copy Area  INSERT
+ Save Area SHIFT + INSERT
+ Copy Active Window  ALT + P
+󰆓 Save Active Window  ALT + SHIFT + P
+ Copy Screen  PRT SC
+ Save Screen  SHIFT + PRT SC
+ Screen Record    + O
+                   + SHIFT + O
+󰑋 Record Part of Screen    + U
 
 

@@ -1,3 +1,6 @@
 vscodium-bin
 waypaper
 swww
+hyprpicker
+ttf-iosevka
+ttf-iosevka-term
