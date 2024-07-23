@@ -21,4 +21,7 @@ pipewire-jack
 wireplumber
 helvum
 pavucontrol
-nnn
+fzf
+ranger
+python-pillow
+rofi-wayland

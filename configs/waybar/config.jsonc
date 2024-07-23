@@ -31,7 +31,8 @@
         "format": "󰣇",
         "tooltip": true,
         "on-click-right": "lxappearance",
-        "on-click": "pkill -9 wofi || wofi --show drun",
+        // "on-click": "pkill -9 wofi || wofi --show drun",
+        "on-click": "pkill -9 rofi || rofi -show drun",
         "on-click-middle": "pkill -9 wofi"
     },
     "custom/weather": {

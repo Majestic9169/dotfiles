@@ -1,6 +1,3 @@
 #! /bin/fish
 
-kitty nvim -Rm ~/Desktop/keybinds.txt
-
-
-
+kitty nvim -Rm ~/.config/my-lists/keybinds.md

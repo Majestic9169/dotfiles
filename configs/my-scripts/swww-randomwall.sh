@@ -21,7 +21,7 @@ SWWW_TRANSITION_DURATION=3
 SWWW_TRANSITION=random
 
 # Update the wallpaper using the swww img command
-swww img "$selectedWallpaper" --transition-duration ${SWWW_TRANSITION_DURATION}
+swww img "$selectedWallpaper" --transition-duration ${SWWW_TRANSITION_DURATION} -t ${SWWW_TRANSITION}
 
 # Remove the selected wallpaper from the array
 unset "wallpapers[$wallpaperIndex]"
