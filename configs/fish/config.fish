@@ -4,4 +4,5 @@ if status is-interactive
     alias scr="cd ~/vegetable-dotfiles/configs/my-scripts/"
     alias lis="cd ~/vegetable-dotfiles/configs/my-lists/"
     alias home="cd ~/"
+    starship init fish | source
 end
