@@ -175,7 +175,7 @@
         "show-passive-items": true,
     },
     "custom/keybindhint": {
-        "format": " ",
+        "format": "  ",
         "rotate": 0,
         "on-click": "~/.config/hypr/keybinds_hint.sh"
     },
