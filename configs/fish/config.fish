@@ -6,3 +6,10 @@ if status is-interactive
     alias home="cd ~/"
     starship init fish | source
 end
+
+# pnpm
+set -gx PNPM_HOME "/home/subzcuber/.local/share/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
+end
+# pnpm end
