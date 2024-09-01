@@ -2,8 +2,8 @@
 
 LOG="${HOME}/Logs/dotfiles.log"
 GITHUB_USER=Majestic9169
-GITHUB_REPO=vegetable-dotfiles
-DIR="/home/${USER}/vegetable-dotfiles"
+GITHUB_REPO=dotfiles
+DIR="/home/${USER}/dotfiles"
 
 mkdir -p "${HOME}/Logs"
 
@@ -22,7 +22,7 @@ download_dotfiles() {
   mkdir -p "${DIR}"
 
   _process "→ Downloading repository to "${DIR}" directory"
-  git clone https://github.com/Majestic9169/vegetable-dotfiles.git "${DIR}"
+  git clone https://github.com/Majestic9169/dotfiles.git "${DIR}"
 
   
   [[ $? ]] && _success "${DIR} created, repository downloaded and extracted"
@@ -87,7 +87,7 @@ link_dotfiles() {
 new_linked() {
   mv "${HOME}/.config" "${HOME}/.config-backup"
   rm -rf "${HOME}/.config/*"
-  ln -sf "${HOME}/vegetable-dotfiles/configs" "${HOME}/.config"
+  ln -sf "${HOME}/dotfiles/configs" "${HOME}/.config"
 }
 
 install() {

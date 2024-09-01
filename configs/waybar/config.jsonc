@@ -14,8 +14,8 @@
         "hyprland/workspaces"
     ],
     "modules-center": [
-        "clock",
-        "custom/weather"
+        "clock"
+        // "custom/weather"
     ],
     "modules-right": [
         "tray",
@@ -23,17 +23,19 @@
         "backlight",
         "custom/wallpaper",
         "custom/keybindhint",
+        "cpu",
+        "memory",
         "network",
         "battery",
     ],
     // sourced from modules based on config.ctl //
     "custom/wofi": {
         "format": "󰣇",
-        "tooltip": true,
+        "tooltip": false,
         "on-click-right": "lxappearance",
         // "on-click": "pkill -9 wofi || wofi --show drun",
         "on-click": "pkill -9 rofi || rofi -show drun",
-        "on-click-middle": "pkill -9 wofi"
+        "on-click-middle": "pkill -9 rofi"
     },
     "custom/weather": {
         "format": "{}",
@@ -41,6 +43,20 @@
         "interval": 3600,
         "exec": "wttrbar --custom-indicator '{ICON}\n<b>{temp_C}</b>' --location hyderabad",
         "return-type": "json"
+    },
+    "cpu": {
+        "interval": 5,
+        "format": "  {usage}%",
+        "tooltip": false
+    },
+    "memory": {
+        "interval": 1,
+        "states": {
+            "good": 0,
+            "okay": 60,
+            "high": 90
+        },
+        "format": " {}% "
     },
     "clock": {
         "interval": 1,

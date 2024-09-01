@@ -71,7 +71,7 @@ window#waybar {
   border-radius: 4px;
 }
 
-#pulseaudio, #backlight, #network, #custom-keybindhint, #custom-wallpaper {
+#pulseaudio, #backlight, #network, #custom-keybindhint, #custom-wallpaper, #cpu, #memory {
   background: @color1;
   color: @background;
 }
@@ -127,7 +127,14 @@ window#waybar {
 #cpu {
 }
 
-#memory {
+#memory.okay {
+	background-color: #ff8700;
+	color: #1b1d1e;
+}
+
+#memory.high {
+	background-color: red;
+	color: #1b1d1e;
 }
 
 #network.ethernet, #network.wifi, #network.linked {
